@@ -1,0 +1,123 @@
+/* 购物车表格 开始*/
+.fl{
+    float: left;
+	}
+.fr{
+    float: right;
+	}
+#shoppingcartinfo thead{
+    background-color: #f5f5f5;
+	}
+table tr{
+	border-color: #ccc;
+	}
+#shoppingcartinfo tr th{
+    font: 18px/1 "微软雅黑";
+    color:#666666;
+	}
+#shoppingcartinfo tr{
+    border: 1px solid #dcdcdc;
+	}
+#shoppingcartinfo tr:hover{
+    background-color: #fef9f6;
+	}
+.checkall{
+    display: none;
+	}
+.checkall[type=checkbox]+span{
+    display: inline-block;
+    width:14px;
+    height: 14px;
+    border: 1px solid #d7d7d7;
+    color:#b5b5b5;
+    vertical-align: bottom;
+    margin-right: 12px;
+	}
+.checkall[type=checkbox]:checked+span:after{
+    content:'\2714';
+    display: inline-block;
+    font-size: 14px;
+    width:14px;
+    height: 14px;
+    border: 1px solid #F36B10;
+    color:#F36B10;
+    text-align: center;
+	}
+.checkallspan{
+    display: inline-block;
+    margin: 0px 22px 0 16px;
+	}
+.shoppingitem{
+    margin: 0px 15px 0 6px;
+    width: 70px;
+    height: 70px;
+	}
+.shoppingdesc{
+    font: 16px/20px "微软雅黑";
+    border: 0px solid #ddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+	}
+.shoppingdesc:hover {
+    overflow: visible;
+    white-space: inherit;
+	}
+.price_td{
+    font:16px/1 "Arial";
+	}
+.purchasenum > i,.purchasenum > input{
+    display: inline-block;
+    width: 30px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    color:#bbbbbb;
+	border-radius: 10px;
+    border: 1px solid #cecece;
+	}
+.purchasenum > input{
+    width:45px;
+    box-sizing: content-box;
+    vertical-align: middle;
+	}
+.sumup{
+    font: 16px/1 "Arial";
+    color:#F36B10;
+	}
+.delete,.collect,.submit{
+	border:none;
+	cursor: pointer;
+	outline: none;
+	}
+.delete,.collect{
+    background-color: #FF0000;
+    color: white;
+    width: 50px;
+    height: 25px;
+    border-radius: 50px;
+}
+.delete{
+    background-color:#60c4e9;
+}
+.submit{
+	width:100px;
+	height:50px;
+	background-color: #B5B5B5;
+	font-size: 18px;
+	}
+
+    /*商品数量增加减少按钮*/
+.plus,.minus{
+    cursor: pointer;
+}
+    /*按钮结束*/
+th{
+    text-align: center !important;
+}
+.goods_name{
+    display: flex;
+    justify-content: space-between;
+}
+/* 购物车表格 结束*/

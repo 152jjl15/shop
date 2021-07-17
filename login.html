@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="layer/layer.js"></script>
+</head>
+<body>
+    <top>
+        <div class="logo">
+            <img src="img/logo.png" height="92" width="240"/>
+        </div>
+    </top>
+
+    <main class="both">
+        <div class="content">
+            <div class="content_box">
+                <img src="img/logn.png" height="24" width="68"/>
+                <form class="cmxform" id="signupForm" method="get" action="">
+
+                    <p>
+                        <img src="img/1_03.png" height="40" width="40"/>
+                        <input id="username" name="username" type="text" placeholder="会员名/邮箱/手机号"/>
+                      </p>  <label for="username"></label>
+                    <p>
+                        <img src="img/2_06.png" height="40" width="40"/>
+                        <input id="password" name="password"  type="password" placeholder="请输入登录密码"/>
+
+                    </p> <label for="password"></label>
+
+                <input class="bmit"  type="button" value="登录">
+
+                </form>
+                <p class="register"><a href="register.html">立即注册</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        // //判断来自注册页面sessionStorage是否为空，不为空就为其赋值
+        // window.addEventListener('load',function(){
+        //     var name = document.getElementById("username").value;
+        //     if(name != null){
+        //         document.getElementById("username").value = sessionStorage.getItem("username");
+        //     }
+            
+        // });
+
+        //登录的后台交互
+        $("#username").blur(function(){
+            $("#password").blur(function(){
+                var nameinput = document.getElementById("username").value;
+                var passwordinput = document.getElementById("password").value;
+                $(".bmit").click(function(){
+                    axios.post('http://yapi.smart-xwork.cn/mock/78830/Online/loginlist',{
+                        username:nameinput,
+                        password:passwordinput
+                    })
+                    .then(function(response){
+                        let result = response.data;
+                        console.log(result);
+                        if(result==""||result==null){
+                            layer.msg("登录失败，请重新登陆！",{icon: 2});
+                            return
+                        }
+                        if(result.status == 0){
+                            layer.msg("用户名或密码错误，请重新登陆！",{icon: 2});
+                            return
+                        }
+                        if(result.status == 1){
+                            layer.msg('登录成功', {icon: 6});
+                            sessionStorage.setItem("username", nameinput);
+                            setTimeout(function(){ 
+                                window.location.href="index.html"; 
+                            }, 2000);
+                            
+                        }
+                    })
+                });
+            });
+        });
+
+        
+    </script>
+</body>
+</html>

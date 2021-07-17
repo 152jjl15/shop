@@ -1,0 +1,9 @@
+{
+    "user": [
+        { "username":"yunyou", "password":"111111" }
+    ],
+    "index":[
+        {"shopName":"万代（BANDAI） SHF 奥特曼银河格斗 新世代英雄 手办模型玩具 15cm SHF 闪耀无限赛罗","price":"890.00","image":"index_1.png"},
+        {"shopName":"万代（BANDAI） SHF 奥特曼1 手办模型玩具 15cm SHF 欧布暗耀","price":"550.00","image":"index_2.png"}
+    ]
+}

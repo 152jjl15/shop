@@ -1,0 +1,23 @@
+{
+  "id": "2665809",
+  "name": "M78商城",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "356445",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "18367982",
+      "name": "减号",
+      "font_class": "jianhao",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    }
+  ]
+}

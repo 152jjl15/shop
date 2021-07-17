@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title>
+<link rel="stylesheet" type="text/css" href="css/register.css"/>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+<script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./js/register.js" type=""></script> 
+<script src="layer/layer.js"></script>
+</head>
+<!--注册功能开始-->
+<body>
+<div class="logo"><img src="img/logo.png" height="92" width="240"/></div>
+<div class="register">
+    <img src="img/register_background.png">
+    <div class="re">
+        <div class="zc"><img src="img/zhuce_03.png"></div>
+        <form class="cmxform" id="signupForm" method="get" action="">
+        <p>
+            <div class="kuang">
+            <span><img src="img/1_03.png"></span>
+            <input id="username" name="username" type="text" placeholder ="用户名">
+        </div>
+        <label for="username"></label>
+        </p>
+        <p>
+        <div class="kuang">
+            <span><img src="img/2_06.png"></span>
+            <input id="password" name="password" type="password" placeholder ="输入密码">
+        </div>
+        <label for="password"></label>
+        </p>
+        <p>
+        <div class="kuang">
+            <span><img src="img/2_06.png"></span>
+            <input id="confirm_password" name="confirm_password" type="password" placeholder ="确认密码">
+        </div>
+        <label for="confirm_password"></label></p>
+       <div class="anniu">
+            <input class="bmit" type="button" value="注册">
+       </div>
+        </form>
+        <a href="login.html">立即登录</a>
+    </div>
+</div>
+<script>
+    $("#username").blur(function(){
+            $("#password").blur(function(){
+                var nameinput = document.getElementById("username").value;
+                var passwordinput = document.getElementById("password").value;
+                $(".bmit").click(function(){
+                    axios.post('http://yapi.smart-xwork.cn/mock/78830/Online/userreg',{
+                        username:nameinput,
+                        password:passwordinput
+                    })
+                    .then(function(response){
+                        let result = response.data;
+                        
+                        if(result.status == 1){
+                            layer.msg('注册成功,即将跳转到登录页面...', {icon: 6}, {time: 3000});
+                            //sessionStorage.setItem("username", nameinput);
+                            setTimeout(function(){ 
+                                window.location.href="login.html"; 
+                            }, 2000);
+                            
+                        }
+                    })
+                });
+            });
+        });
+</script>
+</body>
+</html>

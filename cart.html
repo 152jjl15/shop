@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>M78商城_购物车</title>
+		<link rel="stylesheet" type="text/css" href="./css/cart.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="./iconfont/iconfont.css" />
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<body>
+			<!--回到顶部-->
+			<div id="back_top">
+				<div class="arrow"></div>
+				<div class="stick"></div>
+				</div>
+			<!--回到顶部结束-->
+		    <!--顶部开始-->
+			<div id="top">
+				<img class="float" src="img/logo.png" height="92" width="240"/>
+
+			</div>
+			<!--顶部结束-->
+			<!--导航-->
+			<nav id="nav" class="navbar navbar-inverse">
+				<div>
+					<ul class="nav navbar-nav">
+						<li><a  class="text-center" href="index.html">首页</a></li>
+						<li class="active"><a  class="text-center" href="#">购物车</a></li>
+						<li><a  class="text-center" href="#">关于我们</a></li>
+					</ul>
+				</div>
+				<div id="serch" class="right">
+					<input type="text" placeholder="搜索"><img src="img/serch.png">
+				</div>
+			</nav>
+			<!--导航结束-->
+<!--购物车 开始-->
+<main>
+	<div class="container">
+		<!--购物车表格 开始-->
+		<table border="0" cellspacing="0" id="shoppingcartinfo">
+			<thead>
+				<tr>
+					<th width="75px" height="42px">全选</th>
+					<th width="200px" height="42px">商品</th>
+					<th width="135px" height="42px">折后价格</th>
+					<th width="135px" height="42px">原价</th>
+					<th width="100px" height="42px">优惠</th>
+					<th width="230px" height="42px">购买数量</th>
+					<th width="200px" height="42px">操作</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<!-- 结算模块 -->
+				<tr class="account">
+					<td width="75px" height="42px">
+						<input type="checkbox" name="checkAll" id="checkAll" class="checkAll">
+						<span></span>全选
+					</td>
+					<td colspan="4">
+						<a href="#" class="delete_check">删除所选商品</a>
+					</td>
+					<td width="230px" height="60px" align="left">
+						<dd>合计：<strong>￥<span class="total">2886.00</span></strong></dd>
+					</td>
+					<td align="center">
+						<button type="submit" class="submit">现在结算</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--购物车表格 结束-->
+	</div>
+</main>
+<!--购物车 结束-->
+		    <!--底部-->
+			<footer>
+				<div id="footer_font">
+					<div>
+						<h1>关于网站</h1>
+						<p><a href="#">关于我们</a></p>
+						<p><a href="#">联系我们</a></p>
+					</div>
+					<div>
+						<h1>为什么选择我们？</h1>
+						<p><a href="#">7天无理由退货</a></p>
+						<p><a href="#">15天退货保障</a></p>
+						<p><a href="#">30天换货保障</a></p>
+						<p><a href="#">次日达</a></p>
+						<p><a href="#">一小时派单快速响应</a></p>
+					</div>
+					<div>
+						<h1>关注我们</h1>
+						<p><a href="#">微信</a></p>
+						<p><a href="#">帮助</a></p>
+						<p>M78-8888888888</p>
+					</div>
+				</div>
+				<div class="footer_url">
+					<p class="text-center">Copyright @ 2021.Company name All rights reserved.Believe in light</p>
+				</div>
+			</footer>
+			<!--底部结束-->
+	</body>
+	<script src="js/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="js/public.js"></script>    
+	<script src="js/cart.js"></script>
+	<script src="layer/layer.js"></script>
+	<script>
+		
+    
+	</script>
+</html>

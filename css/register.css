@@ -1,0 +1,76 @@
+.register>img{
+    width:1220px;
+    height:616px;
+    margin-left: 19%;
+    z-index: 1;
+    position: relative;
+}
+.register{
+    background-color: #010101;
+    width:100%;
+    height: 615px;
+    margin-top: 10px;
+}
+.logo{
+    
+    margin-left: 4.5%;
+}
+.re{
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    margin-top: -520px;
+    width: 380px;;
+    height:400px;
+    margin-left: 16%;
+}
+.zc>img{
+margin-left: 30px;
+margin-top: 30px;
+}
+.anniu{
+    margin-top: 15px;
+}
+.anniu>input{
+    background: url(../img/zhuce_12.png) no-repeat;
+    width: 280px;
+    height: 60px;
+    color: white;
+    font-size: 24px;
+ border: none;
+ line-height: 10px;
+ cursor:pointer;
+}
+.kuang input{
+    font-size: 20px;
+    width: 200px;
+    height: 30px;
+    outline:none; 
+    border: none;
+    margin-top: 2px;
+    position: absolute;
+}
+.kuang input::-webkit-input-placeholder{
+    color: #cccccc;
+}
+.kuang{
+    margin-top: 15px;
+    width: 280px;
+    height: 38px;
+    border:1px solid #cccccc;
+}
+.kuang>span{
+    margin-left: -1px;
+}
+.cmxform{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.error{
+	color:red;
+}
+.re a{
+    margin-left: 140px;
+    color: tomato;
+    text-decoration: none;
+}

@@ -1,0 +1,85 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+.logo{
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 10px;
+}
+.both{
+    height: 616px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: black;
+}
+.content{
+    height: 616px;
+    width: 1200px;
+    background: url("../img/background_1.png") no-repeat left;
+    float: left;
+}
+.content_box{
+    height: 350px;
+    width: 300px;
+    background-color: white;
+    float: right;
+    margin-top: 150px;
+    margin-right: -50px;
+}
+.content_box>img{
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.content_box>.cmxform{
+    float: left;
+    margin-left: 15px;
+}
+.content_box>.cmxform>p{
+    display: block;
+    margin-top: 25px;
+    border: solid 1px #f1eeee;
+    height: 40px;
+    margin-left: 20px;
+    width: 220px;
+}
+.content_box>.cmxform>p>img{
+    float: left;
+}
+.content_box>.cmxform>p>input{
+    height: 40px;
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    float: left;
+    line-height: 40px;
+}
+.bmit{
+    height: 40px;
+    width: 240px;
+    margin-left: 15px;
+    margin-top: 20px;
+    background-color: #192639;
+    border: #596677 solid 1px;
+    color: white;
+    font-family: 微软雅黑;
+    font-size: 20px;
+}
+.bmit:hover{
+    cursor: pointer;
+}
+.register{
+    margin-top: 215px;
+    text-align: center;
+}
+.register>a{
+    color: #333333;
+    text-decoration: none;
+}
+.register>a:hover{
+    color: #999999;
+}
+label{
+    color: red;
+    font-size: 14px;
+}

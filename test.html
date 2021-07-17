@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<script>
+    axios.get('http://yapi.smart-xwork.cn/mock/78846/shop/userlist')
+        .then(function(result){
+            // console.log(result.data);
+            let str = "<ul>";
+            for(let item of result.data.data){
+                str = `<li>${item.truename}</li>`
+            }
+            str += "</ul>"
+            $("body").append(str);
+        })
+</script>
+</body>
+</html>
